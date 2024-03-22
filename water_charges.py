@@ -1,5 +1,5 @@
 def water_charges():
-    yearly_household_consumption = input("How many liters did you use this year: ")
+    yearly_household_consumption = int(input("How many liters did you use this year: "))
     number_of_adults = int(input("Enter with the quantity of adults in our house: "))
     number_of_children = int(input("Enter with the quantity of children in our house: "))
 
