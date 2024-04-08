@@ -1,3 +1,5 @@
+import water_charges
+
 def menu():
     while(True):
         print("_" * 35)
@@ -8,20 +10,20 @@ def menu():
         print("5. School Transport")
         print("0. Exit")
         print("_" * 35)
-        option = input("Choose an option (0-5): ")
+        option = int(input("Choose an option (0-5): "))
 
         match option:
-            case "1":
+            case 1:
                 print("CALL FUNCTION HERE")
-            case "2":
+            case 2:
                 print("CALL FUNCTION HERE")
-            case "3":
+            case 3:
+                water_charges.calculate_charges()
+            case 4:
                 print("CALL FUNCTION HERE")
-            case "4":
+            case 5:
                 print("CALL FUNCTION HERE")
-            case "5":
-                print("CALL FUNCTION HERE")
-            case "0":
+            case 0:
                 break
             case other:
                 print("Sorry, this option does not exist!")
