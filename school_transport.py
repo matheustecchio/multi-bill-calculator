@@ -2,17 +2,22 @@
 #objective:
 #The objective is to develop a Python program for subsidizing school transport based on student level and distance from school.
 
-MIN_DISTANCE_PRIMARY = 3.2  # Minimum distance for primary-level students in kilometers
-MIN_DISTANCE_SECONDARY = 4.8  # Minimum distance for second-level students in kilometers
-COST_FIRST_TWO_PRIMARY = 100  # Cost per child for the first two primary-level students
-COST_REMAINING_PRIMARY = 80  # Cost per child for remaining primary-level students
-COST_FIRST_TWO_SECONDARY = 350  # Cost per child for the first two second-level students
-COST_REMAINING_SECONDARY = 300  # Cost per child for remaining second-level students
-PRIMARY_FAMILY_CAP = 390  # Maximum amount due for families with only primary-level students
-SECONDARY_FAMILY_CAP = 940  # Maximum amount due for families with only secondary-level students
-
 # Function to calculate total cost
-def calculate_transport_cost(primary_students, secondary_students):
+def calculate_transport_cost():
+
+    MIN_DISTANCE_PRIMARY = 3.2  # Minimum distance for primary-level students in kilometers
+    MIN_DISTANCE_SECONDARY = 4.8  # Minimum distance for second-level students in kilometers
+    COST_FIRST_TWO_PRIMARY = 100  # Cost per child for the first two primary-level students
+    COST_REMAINING_PRIMARY = 80  # Cost per child for remaining primary-level students
+    COST_FIRST_TWO_SECONDARY = 350  # Cost per child for the first two second-level students
+    COST_REMAINING_SECONDARY = 300  # Cost per child for remaining second-level students
+    PRIMARY_FAMILY_CAP = 390  # Maximum amount due for families with only primary-level students
+    SECONDARY_FAMILY_CAP = 940  # Maximum amount due for families with only secondary-level students
+
+    # Take input from the user for the number of primary-level and second-level students
+    primary_students = int(input("Enter the number of primary-level students: "))
+    secondary_students = int(input("Enter the number of second-level students: "))
+
     total_cost = 0
 
     # Calculate total distance for primary-level students
@@ -43,16 +48,8 @@ def calculate_transport_cost(primary_students, secondary_students):
     else:
         total_cost = min(total_cost, max(PRIMARY_FAMILY_CAP, SECONDARY_FAMILY_CAP))
 
-    return total_cost
-
-# Main program
-if __name__ == "__main__":
-    # Take input from the user for the number of primary-level and second-level students
-    primary_students = int(input("Enter the number of primary-level students: "))
-    secondary_students = int(input("Enter the number of second-level students: "))
-
-    # Calculate total cost
-    total_cost = calculate_transport_cost(primary_students, secondary_students)
-
     # Print the total cost
     print("Total cost for providing subsidized transport: {} euro".format(total_cost))
+
+if __name__ == "__main__":
+    calculate_transport_cost()
