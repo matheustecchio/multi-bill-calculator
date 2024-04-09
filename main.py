@@ -1,4 +1,5 @@
 import water_charges
+import school_transport
 
 def menu():
     while(True):
@@ -22,7 +23,7 @@ def menu():
             case 4:
                 print("CALL FUNCTION HERE")
             case 5:
-                print("CALL FUNCTION HERE")
+                school_transport.calculate_transport_cost()
             case 0:
                 break
             case other:
