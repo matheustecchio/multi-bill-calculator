@@ -27,10 +27,6 @@ def calculate_tax():
         tax_due = (35800 * 0.20) + ((taxable_income - 35800) * 0.40)
 
     return round(tax_due), tfa
- # Example usage
-tax_due, total_allowance = calculate_tax()
-print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", total_allowance)
-print("Total tax payed: \u20AC", tax_due - total_allowance)
 
 def monthly_pay():
      print("--Welcome To The Monthly Pay Calculator--")
@@ -54,6 +50,11 @@ def monthly_pay():
 
      return round(total_monthly_pay, 2), round(commission_earned, 2)
 
-total_monthly_pay, total_commission = monthly_pay()
-print("Total monthly pay:", total_monthly_pay)
-print("Total commission:", total_commission)
+if __name__ == "__main__":
+    tax_due, total_allowance = calculate_tax()
+    print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", total_allowance)
+    print("Total tax payed: \u20AC", tax_due - total_allowance)
+
+    total_monthly_pay, total_commission = monthly_pay()
+    print("Total monthly pay:", total_monthly_pay)
+    print("Total commission:", total_commission)
