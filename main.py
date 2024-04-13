@@ -6,6 +6,7 @@ The main code that runs the interactive menu to execute all our functions.
 """
 import water_charges
 import school_transport
+import TFAandMonthlyPay
 
 def menu():
     while(True):
@@ -21,9 +22,9 @@ def menu():
 
         match option:
             case 1:
-                print("CALL FUNCTION HERE")
+                TFAandMonthlyPay.calculate_tax()
             case 2:
-                print("CALL FUNCTION HERE")
+                TFAandMonthlyPay.monthly_pay()
             case 3:
                 water_charges.calculate_charges()
             case 4:
