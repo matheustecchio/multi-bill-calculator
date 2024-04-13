@@ -1,3 +1,9 @@
+"""
+Author: Matheus Dias Tecchio
+Data: 06/04/2024
+
+The main code that runs the interactive menu to execute all our functions.
+"""
 import water_charges
 import school_transport
 
