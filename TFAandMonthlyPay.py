@@ -1,6 +1,9 @@
- # 02/4/24 Jordan Buckley - Class CC
+# 02/4/24 Jordan Buckley - Class CC
+
+# Function to calculate tax based on salary, number of children, and mortgage payments
 def calculate_tax():
     print("--Welcome To The Tax Calculator--")
+    # User inputs: salary, number of children, and monthly mortgage payments
     salary = int(input("Enter your salary: "))
     children = int(input("Enter the amount of children you have: "))
     mortgage = int(input("Enter amount of monthly mortgage payments: "))
@@ -26,35 +29,51 @@ def calculate_tax():
     else:
         tax_due = (35800 * 0.20) + ((taxable_income - 35800) * 0.40)
 
+    # Return the calculated tax due and total allowance
     return round(tax_due), tfa
 
+
+## Example usage
+# Calculate tax due and total allowance using the calculate_tax function
+tax_due, total_allowance = calculate_tax()
+# Print the results
+print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", total_allowance)
+print("Total tax payed: \u20AC", tax_due - total_allowance)
+
+# Function to calculate monthly pay based on years worked, sales region, monthly sales, and mileage
 def monthly_pay():
-     print("--Welcome To The Monthly Pay Calculator--")
-     years_worked = int(input("Enter the amount of years worked: "))
-     sales_region = input("Which region are you in 1.SW, 2.MW, 3.NW, 4.SE, 5.ME, 6.NE: ")
-     monthly_sales = int(input("Enter total sales within this month: "))
-     mileage = int(input("Enter amount of mileage: "))
+    print("--Welcome To The Monthly Pay Calculator--")
+    # User inputs: years worked, sales region, monthly sales, and mileage
+    years_worked = int(input("Enter the amount of years worked: "))
+    sales_region = int(input("Which region are you in 1.SW, 2.MW, 3.NW, 4.SE, 5.ME, 6.NE: "))
+    monthly_sales = int(input("Enter total sales within this month: "))
+    mileage = int(input("Enter amount of mileage: "))
 
-     # Define commission rates based on years of service and sales region
-     if years_worked >= 5 and sales_region in ['SW', 'MW', 'NW']:
-         commission_rate = 0.04
-         if mileage > 2000:
-             commission_rate += 0.003
-     else:
-         commission_rate = 0.035
-         if mileage > 3000:
-             commission_rate += 0.005
+    # Define commission rates based on years of service and sales region
+    if years_worked >= 5 and sales_region >= 1 and sales_region <= 3:
+        commission_rate = 0.04
+        if mileage > 2000:
+            commission_rate += 0.003
+    elif years_worked >= 5 and sales_region >= 4 and sales_region <= 6:
+        commission_rate = 0.03
+        if mileage > 3000:
+            commission_rate += 0.005
+    elif sales_region >= 1 and sales_region <= 3:
+        commission_rate = 0.035
+        if mileage > 2000:
+            commission_rate += 0.003
+    elif sales_region >= 4 and sales_region <= 6:
+        commission_rate = 0.025
+        if mileage > 3000:
+            commission_rate += 0.005
 
-     # Assuming no basic salary defined here
-     total_monthly_pay = commission_earned = monthly_sales * commission_rate
+    # Assuming no basic salary defined here
+    # Calculate total monthly pay and commission earned
+    total_monthly_pay = commission_earned = monthly_sales * commission_rate
 
-     return round(total_monthly_pay, 2), round(commission_earned, 2)
-
-if __name__ == "__main__":
-    tax_due, total_allowance = calculate_tax()
-    print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", total_allowance)
-    print("Total tax payed: \u20AC", tax_due - total_allowance)
-
-    total_monthly_pay, total_commission = monthly_pay()
+    # Print the total monthly pay and commission earned
     print("Total monthly pay:", total_monthly_pay)
-    print("Total commission:", total_commission)
+    print("Total commission:", commission_earned)
+
+# Call the monthly_pay function to calculate and print the monthly pay
+monthly_pay()
