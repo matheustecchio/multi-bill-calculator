@@ -29,16 +29,10 @@ def calculate_tax():
     else:
         tax_due = (35800 * 0.20) + ((taxable_income - 35800) * 0.40)
 
-    # Return the calculated tax due and total allowance
-    return round(tax_due), tfa
+    # Print the results
+    print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", tfa)
+    print("Total tax payed: \u20AC", tax_due - tfa)
 
-
-## Example usage
-# Calculate tax due and total allowance using the calculate_tax function
-tax_due, total_allowance = calculate_tax()
-# Print the results
-print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", total_allowance)
-print("Total tax payed: \u20AC", tax_due - total_allowance)
 
 # Function to calculate monthly pay based on years worked, sales region, monthly sales, and mileage
 def monthly_pay():
@@ -75,5 +69,6 @@ def monthly_pay():
     print("Total monthly pay:", total_monthly_pay)
     print("Total commission:", commission_earned)
 
-# Call the monthly_pay function to calculate and print the monthly pay
-monthly_pay()
+if __name__ == "__main__":
+    calculate_tax()
+    monthly_pay()
