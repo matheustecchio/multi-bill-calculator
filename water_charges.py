@@ -1,9 +1,9 @@
-"""
-Author: Matheus Dias Tecchio
-Data: 06/04/2024
+# Author: Matheus Dias Tecchio
+# Class: CC - Software Development
+# Date: 06/04/2024
 
-A function do calculate how much the householder have to pay based on the water's consumption.
-"""
+# A function do calculate how much the householder have to pay based on the water's consumption.
+
 def calculate_charges():
     yearly_household_consumption = int(input("\nHow many liters did you use this year: "))
     number_of_adults = int(input("Enter with the quantity of adults in our house: "))
