@@ -10,6 +10,7 @@ import TFAandMonthlyPay
 # Display the menu
 def menu():
     while(True):
+        print("--Welcome To The Multi-Bill Calculator Menu--")
         print("_" * 35)
         print("1. Tax")
         print("2. Monthly Pay for Sales Employees")
