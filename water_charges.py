@@ -5,6 +5,7 @@
 # A function do calculate how much the householder have to pay based on the water's consumption.
 
 def calculate_charges():
+    print("--Welcome To The Water Charges Calculator--")
     yearly_household_consumption = int(input("\nHow many liters did you use this year: "))
     number_of_adults = int(input("Enter with the quantity of adults in our house: "))
     number_of_children = int(input("Enter with the quantity of children in our house: "))
