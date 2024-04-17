@@ -15,6 +15,7 @@ def calculate_transport_cost():
     SECONDARY_FAMILY_CAP = 940  # Maximum amount due for families with only secondary-level students
 
     # Take input from the user for the number of primary-level and second-level students
+    print("--Welcome To The School Transport Calculator--")
     primary_students = int(input("Enter the number of primary-level students: "))
     secondary_students = int(input("Enter the number of second-level students: "))
 

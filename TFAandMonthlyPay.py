@@ -29,6 +29,8 @@ def calculate_tax():
     else:
         tax_due = (35800 * 0.20) + ((taxable_income - 35800) * 0.40)
 
+    tax_due = round(tax_due)
+
     # Print the results
     print("Tax due:\u20AC", tax_due, "Total allowance:\u20AC", tfa)
     print("Total tax payed: \u20AC", tax_due - tfa)
@@ -66,8 +68,8 @@ def monthly_pay():
     total_monthly_pay = commission_earned = monthly_sales * commission_rate
 
     # Print the total monthly pay and commission earned
-    print("Total monthly pay:", total_monthly_pay)
-    print("Total commission:", commission_earned)
+    print("Total monthly pay:", round(total_monthly_pay))
+    print("Total commission:", round(commission_earned))
 
 if __name__ == "__main__":
     calculate_tax()
