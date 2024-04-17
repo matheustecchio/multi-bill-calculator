@@ -1,4 +1,4 @@
-# Author: Matheus Tecchio, Jordan Buckley, Schumaicher Monteiro
+# Author: Matheus Tecchio, Jordan Buckley, Schumaicher Monteiro and Mohhammed Mohammed
 # Data: 06/04/2024
 
 # The main code that runs the interactive menu to execute all our functions.
@@ -6,6 +6,7 @@
 import water_charges
 import school_transport
 import TFAandMonthlyPay
+import property_tax
 
 # Display the menu
 def menu():
@@ -30,7 +31,7 @@ def menu():
             case 3:
                 water_charges.calculate_charges()
             case 4:
-                print("Here would run Mohammed code.")
+                property_tax.calculate_property_tax()
             case 5:
                 school_transport.calculate_transport_cost()
             case 0:
