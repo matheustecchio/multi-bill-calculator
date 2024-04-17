@@ -1,6 +1,3 @@
-# 02/4/24 Jordan Buckley - Class CC
-
-# Function to calculate tax based on salary, number of children, and mortgage payments
 def calculate_tax():
     print("--Welcome To The Tax Calculator--")
     # User inputs: salary, number of children, and monthly mortgage payments

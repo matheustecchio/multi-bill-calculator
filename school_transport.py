@@ -1,8 +1,3 @@
-#Schumaicher Alves Monteiro Class: CC
-#objective:
-#The objective is to develop a Python program for subsidizing school transport based on student level and distance from school.
-
-# Function to calculate total cost
 def calculate_transport_cost():
 
     MIN_DISTANCE_PRIMARY = 3.2  # Minimum distance for primary-level students in kilometers
